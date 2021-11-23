@@ -5,12 +5,14 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.2'
 
+gem 'annotate'
+gem 'faker'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 6.1.4'
+gem 'ransack'
 gem 'sass-rails', '>= 6'
 gem 'slim'
 gem 'sqlite3', '~> 1.4'
-
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'dotenv-rails'

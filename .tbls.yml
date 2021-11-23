@@ -1,0 +1,41 @@
+dsn: sqlite://db/development.sqlite3
+
+detectVirtualRelations:
+  enabled: true
+  strategy: default
+exclude:
+  - schema_migrations
+  - ar_internal_metadata
+er:
+  comment: true
+comments:
+  - table: users
+    tableComment: ユーザー
+    columnComments:
+      name: 氏名
+      age: 年齢
+      created_at: 作成日時
+      updated_at: 更新日時
+    labels:
+      - private information
+  - table: blogs
+    tableComment: ブログ
+    columnComments:
+      user_id: 作成者
+      published_dt: 発行日
+      status: ステータス
+      created_at: 作成日時
+      updated_at: 更新日時
+    labels:
+      - document
+  - table: comments
+    tableComment: コメント
+    columnComments:
+      user_id: コメント者
+      blog_id: ブログ
+      published_dt: コメント日
+      document: コメント
+      created_at: 作成日時
+      updated_at: 更新日時
+    labels:
+      - document
